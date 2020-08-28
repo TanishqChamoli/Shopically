@@ -1,0 +1,45 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: ivory;
+}
+.header{
+    height: 50px;
+    background-color: rgb(93, 16, 236);
+    font-size: 20px;
+}
+
+.main-nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+      color: rgb(104, 224, 77);
+  }
+
+  .location{
+      color: lawngreen;
+      margin-left: 200px;
+  }
+  .search{
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .btn {
+    font: inherit;
+    border: 1px solid #00695c;
+    color: #1cecd4;
+    background: black;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  .list{
+      margin-right: 20px;
+  }
