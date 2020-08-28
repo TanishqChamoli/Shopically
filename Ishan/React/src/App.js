@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 //import Navbar from './components/Navbar'
 //import Landing from './components/Landing'
+import Logout from './components/Logout'
 import Login from './components/Login'
-//import Register from './components/Register'
+import Register from './components/Register'
 import Profile from './components/Profile'
+import Otp from './components/Otp'
 
 class App extends Component {
   render() {
@@ -18,6 +20,10 @@ class App extends Component {
             
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/otp" component={Otp} />
+            <Route exact path="/logout" component={Logout} />
+            
             
           </div>
         </div>

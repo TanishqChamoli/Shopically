@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { login } from './UserFunctions'
 import jwt_decode from 'jwt-decode'
+import {Redirect} from 'react-router-dom'
 
 class Login extends Component {
   constructor() {
@@ -38,6 +39,10 @@ class Login extends Component {
   }
 
   render() {
+    if (localStorage.getItem("usertoken") !== null) {
+          return (<Redirect to={{pathname: '/profile'}} />)
+        }
+
     return (
       <div className="container">
         <div className="row">

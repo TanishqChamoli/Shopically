@@ -2,11 +2,13 @@ import axios from 'axios'
 
 export const register = newUser => {
   return axios
-    .post('users/register', {
-      first_name: newUser.first_name,
-      last_name: newUser.last_name,
+    .post('/register', {
+      name: newUser.name,
+      address: newUser.address,
+      mobile: newUser.mobile,
       email: newUser.email,
-      password: newUser.password
+      password: newUser.password,
+      types:newUser.types
     })
     .then(response => {
       console.log('Registered')
@@ -22,6 +24,21 @@ export const login = user => {
     })
     .then(response => {
       localStorage.setItem('usertoken', response.data)
+      return response.data
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}
+
+
+export const regotp = uotp => {
+  return axios
+    .post('/otp', {
+      otp: uotp.otp
+    })
+    .then(response => {
+      //localStorage.setItem('usertoken', response.data)
       return response.data
     })
     .catch(err => {
