@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Signup from "./signup";
 import Form from "./form";
+import "./choice.css";
 
 class Choice extends Component {
   state = {};
@@ -14,8 +15,12 @@ class Choice extends Component {
   render() {
     return (
       <React.Fragment>
-        <button onClick={this.login}>LOGIN</button>
-        <button onClick={this.signup}>SignIN</button>
+        <div id="ch">
+          <button onClick={this.login}>LOGIN</button>
+          <br />
+          <br />
+          <button onClick={this.signup}>SIGNIN</button>
+        </div>
       </React.Fragment>
     );
   }
