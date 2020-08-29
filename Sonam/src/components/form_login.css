@@ -2,9 +2,9 @@ form {
   text-align: center;
   margin: auto;
   /* display: inline-block; */
-  padding-top: 200px;
+  padding-top: 150px;
   position: relative;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 15px;
   /* border: 1px solid black; */
   /* margin-right: 150px; */
@@ -12,20 +12,20 @@ form {
   box-sizing: border-box;
 }
 #mail {
-  width: 230px;
+  width: 270px;
   height: 20px;
   border-color: black;
   /* padding-left: 80px; */
 }
 #pass {
-  width: 200px;
+  width: 270px;
   height: 20px;
   border-color: black;
 }
 #animation {
   text-align: center;
   font-size: 65px;
-  font-weight: bold;
+  /* font-weight: bold; */
   background: linear-gradient(rgb(248, 139, 139), transparent),
     linear-gradient(to top left, lime, transparent),
     linear-gradient(to top right, blue, transparent);
@@ -37,6 +37,13 @@ body {
   position: relative;
 }
 #sub {
-  font-size: 18px;
+  height: 40px;
+  width: 80px;
+  border: 2px solid black;
+  margin-left: 10px;
   /* border-color: black; */
+}
+#sign {
+  font-size: 20px;
+  padding-top: 50px;
 }
