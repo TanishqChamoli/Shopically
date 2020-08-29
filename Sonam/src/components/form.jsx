@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./form_login.css";
 class Form extends Component {
   state = {};
   return() {
@@ -13,12 +14,21 @@ class Form extends Component {
           <br />
           (SHOP LOCALLY)
           {/* </marquee> */}
+          <br />
           <form id="form_login">
-            Email: <input id="mail" type="email" name="Email" />
+            <div id="sign">
+              SIGNIN
+              <br />
+              <br />
+            </div>{" "}
+            Email: <br />
+            <br />
+            <input id="mail" type="email" name="Email" />
             <br />
             <br />
+            Password: <br />
             <br />
-            Password: <input id="pass" type="password" name="Password" />
+            <input id="pass" type="password" name="Password" />
             <br />
             <br />
             <br />
