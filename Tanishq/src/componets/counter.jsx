@@ -40,8 +40,8 @@ class Counter extends Component {
     if (this.state.count > 0) this.setState({ count: this.state.count - 1 });
   };
   // under const.
-  toDelete = () => {
-    console.log("Delete has been called");
+  toDelete = (id) => {
+    console.log("Delete has been called", id);
   };
 }
 
