@@ -15,6 +15,7 @@ import json
 from flask_jwt_extended import JWTManager
 from flask_jwt_extended import (create_access_token)
 import requests
+from ../sectors import read
 #from flask_session import Session
 
 URL = 'https://www.way2sms.com/api/v1/sendCampaign'
@@ -48,7 +49,7 @@ otp=''
 def register():
 	global otp
 	global URL
-	fields=['name','email','mobile','password','address']
+	fields=['name','email','mobile','password','sector','hno']
 	data=request.get_json()
 	dic={}
 	
@@ -101,7 +102,7 @@ def profile(username):
 @app.route("/login",methods=['POST','GET'])
 def login():
 	if not ( ('uid' in session) and ('type' in session)):
-		fields=['name','address','register']
+		fields=['name','hno','sector','register']
 		dic={}
 		data=request.get_json()
 		types=data.get('type')
@@ -178,6 +179,26 @@ def otp():
 	else:
 		session.clear()
 		return jsonify({'result':'fail'})
+
+
+@app.route('/product',methods=['POST'])
+def sector():
+	#global otp
+	data=request.get_json()
+	sector=data['sector']
+	df=read(sector)
+	df.append(int(sector))
+	result=database.Products.find({'sector':{$in:df}})
+	products=[]
+	for objs in result:
+		objs['_id']=''
+		products.append(objs)
+	access_token = create_access_token(identity = {'products':products})
+	return access_token
+
+
+
+
 			
 
 

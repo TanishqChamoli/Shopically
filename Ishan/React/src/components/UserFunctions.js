@@ -59,3 +59,29 @@ export const getProfile = user => {
       console.log(err)
     })
 }
+
+export const location = position => {
+  return axios
+    .get('http://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&sensor=true')
+    .then(response => {
+      console.log(response.data)//localStorage.setItem('usertoken', response.data)
+      return response.data
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}
+
+export const loc = sector => {
+  return axios
+    .post('/product', {
+      sector: sector
+    })
+    .then(response => {
+      //localStorage.setItem('usertoken', response.data)
+      return response.data
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}

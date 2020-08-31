@@ -7,7 +7,8 @@ class Register extends Component {
     this.state = {
       name: '',
       mobile:'',
-      address:'',
+      hno:'',
+      sector:'',
       email: '',
       password: '',
       types:'',
@@ -27,7 +28,8 @@ class Register extends Component {
     const newUser = {
       name: this.state.name,
       mobile: this.state.mobile,
-      address: this.state.address,
+      hno: this.state.hno,
+      sector:this.state.sector,
       email: this.state.email,
       password: this.state.password,
       types:this.state.types
@@ -85,8 +87,19 @@ class Register extends Component {
                   type="text"
                   className="form-control"
                   name="address"
-                  placeholder="Enter your address"
-                  value={this.state.address}
+                  placeholder="Enter House No"
+                  value={this.state.hno}
+                  onChange={this.onChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="address">address</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="address"
+                  placeholder="Sector"
+                  value={this.state.sector}
                   onChange={this.onChange}
                 />
               </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import jwt_decode from 'jwt-decode'
+import { location,loc } from './UserFunctions'
 
 class Profile extends Component {
   constructor() {
@@ -8,24 +9,69 @@ class Profile extends Component {
       first_name: '',
       last_name: '',
       email: '',
-      errors: {}
+      present_location: {}
+    }
+
+    this.getlocation=this.getlocation.bind(this)
+    this.sendposition=this.sendposition.bind(this)
+  }
+
+  sendposition(position){
+    this.setState({
+
+    present_location: location(position)
+  })
+  
+  }
+  
+  getlocation(){
+
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(this.sendposition)
+    }
+    else{
+
+
     }
   }
+
+  
 
   componentDidMount() {
     const token = localStorage.usertoken
     const decoded = jwt_decode(token)
+    
+    
+
+
+
     this.setState({
       first_name: decoded.identity.data['name'],
       //last_name: decoded.identity.last_name,
       date: decoded.identity.data['register'],
-
+      type:decoded.identity.types,
       orders:decoded.identity.data['orders'],
+      products:decoded.identity.data['products']
 
-      one:decoded.identity.data['orders'][0].name,
-      two:decoded.identity.data['orders'][1].name
     })
   
+     if (this.type!='Shop'){
+     this.getlocation()
+     //console.log(this.present_location)
+     loc(m).then(res=>{
+
+
+       const tlist = jwt_decode(res)
+
+
+       this.setState({
+
+       products: tlist.identity.products  })
+
+     })
+
+   }
+
   }
 
  /* design(){
@@ -68,8 +114,7 @@ class Profile extends Component {
                 <td>{this.state.date}</td>
               </tr>
             
-            <tr><td>{this.state.one}</td></tr>
-            <tr><td>{this.state.two}</td></tr>
+            
 
             
 
