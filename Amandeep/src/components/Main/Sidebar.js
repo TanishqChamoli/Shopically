@@ -1,11 +1,11 @@
-import React from 'react'
-import './Main.css'
-const sidebar=(props)=>{
+import React from 'react';
+import { findAllByTestId } from '@testing-library/react';
+const sidebar=()=>{
     return (
-        <aside className="search_main_div_aside">
+        <aside className="aside">
             <h1>Filters</h1>
         </aside>
-    )
+    );
 }
 
 export default sidebar;

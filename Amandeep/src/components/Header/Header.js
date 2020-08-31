@@ -1,42 +1,20 @@
-import React from 'react'
-import LoggedIn from './Loggedin';
-import LoggedOut from './Loggedout';
+import React,{Fragment} from 'react';
+import Logo from './Logo';
+import Location from './Location';
+import Search from './Search';
+import User from './User'
 import './Header.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 const header=(props)=>{
-    let logout=true;
-    if(logout)
-    {
-        return (
-            <header className="search_header">
-                <nav className="navbar">
-                    <h1 className="navbar_h1">Shopically</h1>
-                    <p className="navbar_p">Your location</p>
-                    <form className="navbar_form" action="/">
-                        <input className="navbar_form_input" type="search" />
-                        <button className="navbar_form_button">Search</button>
-                    </form>
-                    <LoggedOut />
-                </nav>
-            </header>
-            )
-    }
-    else
-    {
-        return (
-            <header>
-                <nav className="navbar">
-                    <h1 className="navbar_h1">Shopically</h1>
-                    <p className="navbar_p">Your location</p>
-                    <form className="navbar_form" action="/">
-                        <input className="navbar_form_input" type="search" />
-                        <button className="navbar_form_button">Search</button>
-                    </form>
-                    <LoggedIn/>   
-                </nav>
-            </header>
-            );
-    }
-    
+return(
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="flex-container">
+                <Logo />
+                <Location/>
+                <Search />
+                <User />
+            </div>
+        </nav>
+);
 }
-
-export default header
+export default header;

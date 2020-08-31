@@ -1,33 +1,10 @@
-
-.navbar{
+.flex-container{
     display:flex;
     width:100%;
-    background-color:black;
-    color:white;
-    align-items:center;
 }
-.navbar_h1,
-.navbar_p,
-.navbar_form,
-.navbar_ul{
-    flex-grow: 1;
-    margin:1% 0;
+.flex-item{
+    flex-grow:1;
 }
-.navbar_p{
-    text-align:center;
-}
-.navbar_form{
-    text-align:center;
-}
-.navbar_ul{
-    text-align:right;
-    list-style:none;
-    display:inline-block;
-}
-.navbar_ul_li{
-    display:inline-block;
-}
-.navbar_ul_li:nth-child(2){
-    margin-left:10%;
-    margin-right:5%;
+.flex-item-last{
+    margin-left:auto;
 }

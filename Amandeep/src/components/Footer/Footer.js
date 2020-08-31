@@ -1,11 +1,9 @@
 import React from 'react';
-import './Footer.css'
-const footer=(props)=>{
+const footer=()=>{
     return (
-        <footer className="footer">
-            <h1>This is footer</h1>
-        </footer>
+        <div class="card-footer text-muted">
+            Something over here
+        </div>
     );
 }
-
 export default footer;

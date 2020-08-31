@@ -1,106 +1,51 @@
-import React from 'react';
+import React,{Fragment} from 'react';
+import './Main.css';
+import Card from './Card';
 import Sidebar from './Sidebar';
-import './Main.css'
-const Main =(props)=>{
+import ShopButton from './Shop_button';
+import ProductButton from './Product_button';
+const main=()=>{
     return (
-        <main className="search_main"> 
-            <div className="search_main_div1">
-                <button className="search_main_div1_button1">Product</button>
-                <button className="search_main_div1_button2">Shop</button>          
+        <div className="d-flex">
+            <Sidebar />
+            <div className="main-div">
+                <div className="d-flex">
+                    <ProductButton /> 
+                    <ShopButton />
+                </div>
+                <div className="d-flex">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+                <div className="d-flex">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+                <div className="d-flex">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+                <div className="d-flex">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+                <div className="d-flex">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+                <div className="d-flex">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+                
             </div>
-            <Sidebar/>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-            <div className="search_main_div2"> 
-                <section className="search_main_div2_section">This is First section</section>
-                <section className="search_main_div2_section">This is Second section</section>
-                <section className="search_main_div2_section">This is Third section</section>
-            </div>
-        </main>
+        </div>
     );
 }
-
-export default Main;
+export default main;
