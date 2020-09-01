@@ -15,7 +15,7 @@ import json
 from flask_jwt_extended import JWTManager
 from flask_jwt_extended import (create_access_token)
 import requests
-from ../sectors import read
+from sectors import read
 #from flask_session import Session
 
 URL = 'https://www.way2sms.com/api/v1/sendCampaign'
@@ -60,11 +60,12 @@ def register():
 		if data.get('types')=='Shop Owner':
 			ida=database.Shops.count()
 			dic['uid']=ida+1
+			dic['code']='d23'
 			session['dic']=dic
 			session['types']='Shop'
 			#database.Shops.insert_one(dic)
 		else:
-			ida=database.Costumers.count()
+			ida=database.Costumers.count() 
 			dic['uid']=ida+1
 			session['dic']=dic
 			session['types']='Cost'
@@ -120,12 +121,15 @@ def login():
 			session['type']=types
 			if types=='Shop Owner':
 				session['shopcode']=results[0]['code']
-				obj=database.Products.find({'shopcode':results[0]['code'] })
-				orj=database.Orders.find({'shopcode':results[0]['code'] })
+				dic['shope']=results[0]['sname']
+				obj=database.Products.find({'scode':results[0]['code'] })
+				orj=database.Orders.find({'scode':results[0]['code'] })
 				for objs in obj:
+					objs['_id']=''
 					products.append(objs)
 
 				for orjs in orj:
+					orjs['_id']=''
 					orders.append(orjs)
 				
 				dic['products']=products
@@ -169,6 +173,7 @@ def otp():
 	data=request.get_json()
 	if otp==data['otp']:
 		if session['types']=='Shop':
+			
 			database.Shops.insert_one(session['dic'])
 		else:
 			database.Costumers.insert_one(session['dic'])
@@ -188,7 +193,7 @@ def sector():
 	sector=data['sector']
 	df=read(sector)
 	df.append(int(sector))
-	result=database.Products.find({'sector':{$in:df}})
+	result=database.Products.find({'sector':{'$in':df}})
 	products=[]
 	for objs in result:
 		objs['_id']=''
