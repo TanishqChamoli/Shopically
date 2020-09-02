@@ -1,0 +1,33 @@
+.shopImg{
+    float: right;
+}
+.containers{
+    width: 100%;
+    margin: 0px;
+    }
+    .display-4{
+        width: 100%;
+        display: flex;
+        align-content: flex-start;
+        text-decoration: underline;
+        padding-bottom: 10px;;
+    }
+    .lead{
+        display: flex;
+        align-content: flex-start;
+    }
+    .R-search{
+        margin-left: 20px;
+    }
+
+    .aside{
+        margin-right:3rem;
+        width:200px;
+    }
+    div.card{
+        width:18rem;
+        margin:4rem 6rem 2rem 6rem;
+    }
+    .side-card{
+        display:flex;
+    }

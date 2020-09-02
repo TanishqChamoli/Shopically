@@ -1,0 +1,10 @@
+.flex-container{
+    display:flex;
+    width:100%;
+}
+.flex-item{
+    flex-grow:1;
+}
+.flex-item-last{
+    margin-left:auto;
+}
