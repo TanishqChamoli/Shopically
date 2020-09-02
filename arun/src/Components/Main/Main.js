@@ -17,6 +17,7 @@ import Sidebar from './Sidebar';
             </div>
             <div className="side-card">
             <Sidebar/>
+            <div>
             <div className="d-flex">
                     <Card />
                     <Card />
@@ -46,6 +47,7 @@ import Sidebar from './Sidebar';
                     <Card />
                     <Card />
                     <Card />
+                </div>
                 </div>
                 </div>
     </div>
