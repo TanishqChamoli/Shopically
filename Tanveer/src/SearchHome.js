@@ -1,5 +1,5 @@
 import React from 'react';
-
+import axios from 'axios';
 class SearchHome extends React.Component {
   constructor(props) {
     super(props);
@@ -15,9 +15,15 @@ class SearchHome extends React.Component {
   }
 
   handleSubmit(event) {
-    //API Call
-    alert('A query was submitted: ' + this.state.querySearch + this.state.locationSelect + this.state.searchBySelect);
     event.preventDefault();
+    /*let formData = new FormData();
+    formData.append("locationQuery", this.state);
+    formData.append("searchbyQuery", this.state);
+    formData.append("originalQuery", this.state);
+    const url = "http://localhost:80/homepage/my-app/backend/searchpage.php";
+    axios.post(url, formData)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err));*/
   }
   handleDetect(event) {
     //GeoLocation
