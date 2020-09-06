@@ -1,6 +1,6 @@
 # Shopically
 For the better management of the code
 
-bootstraped pages
-search page
+bootstraped pages-
+search page,
 shop display page
