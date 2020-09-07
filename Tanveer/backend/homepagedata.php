@@ -11,6 +11,9 @@
         PDO::ATTR_EMULATE_PREPARES   => false,
     ];
     try {
+        $myData = array();
+        $myData['first'] = [];
+        $myData['second'] = [];
         $pdo = new PDO($dsn, $user, $pass, $options);
         /*$recvText = $_POST['text'];
         $sql = "INSERT INTO react_php (id,texts) VALUES(1,?)";
@@ -19,7 +22,15 @@
         $res=$pdo->prepare($sql);
         $res->execute();
         $ans=$res->fetchAll(PDO::FETCH_OBJ);
-        echo json_encode($ans);
+        $myData["first"]=$ans;
+
+        $sql = "SELECT `product_id`, `product_name`, `product_brand`, `product_price`,`product_image` FROM `product` WHERE location='moh'";
+        $res = $pdo->prepare($sql);
+        $res->execute();
+        $ans = $res->fetchAll(PDO::FETCH_OBJ);
+        $myData["second"]=$ans;
+
+        echo json_encode($myData);
     } catch (\PDOException $e) {
         throw new \PDOException($e->getMessage(), (int)$e->getCode());
     }
