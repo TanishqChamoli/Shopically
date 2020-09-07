@@ -14,6 +14,16 @@ class Signup extends Component {
     };
     this.handleAdd = this.handleAdd.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.routeChange = this.routeChange.bind(this);
+    this.accountform = this.accountform.bind(this);
+  }
+  accountform() {
+    let path = '/accountform';
+    this.props.history.push(path);
+  }
+  routeChange() {
+    let path = '/';
+    this.props.history.push(path);
   }
   handleAdd = async (e) => {
     this.setState({
@@ -100,8 +110,10 @@ class Signup extends Component {
             name="submit"
             type="submit"
             onClick={this.handleSubmit}
-            value="Login"
-          />
+            value="SIGNUP"
+          />{"  "}
+          <button onClick={this.routeChange}>LOGIN</button>{"  "}
+          <button onClick={this.accountform}>SIGNUP FOR NEW SHOP</button>
         </form>
       </div>
     );
