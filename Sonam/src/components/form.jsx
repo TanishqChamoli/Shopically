@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { useHistory } from 'react-router-dom';
 import "./form_login.css";
 import axios from "axios";
 class Form extends Component {
@@ -10,6 +11,23 @@ class Form extends Component {
     };
     this.handleAdd = this.handleAdd.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.forgotPassword = this.forgotPassword.bind(this);
+    this.signup = this.signup.bind(this);
+    this.accountform = this.accountform.bind(this);
+  }
+  signup() {
+    let path = '/signup';
+    this.props.history.push(path);
+    // let path = "/x?=q" + this.state.querySearch;
+    // this.props.history.push(path);
+  }
+  forgotPassword() {
+    let path = '/forgot';
+    this.props.history.push(path);
+  }
+  accountform() {
+    let path = '/accountform';
+    this.props.history.push(path);
   }
   handleAdd = async (e) => {
     this.setState({
@@ -72,7 +90,10 @@ class Form extends Component {
               type="submit"
               onClick={this.handleSubmit}
               value="Login"
-            />
+            />{"  "}
+            <button onClick={this.signup}>Create New Account</button>{"  "}<br />
+            <button onClick={this.forgotPassword}>Forgot Password?</button>{"  "}
+            <button onClick={this.accountform}>Register for new shop</button>{"  "}
           </div>
         </div>
       </div>
