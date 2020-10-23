@@ -18,19 +18,12 @@
         /*$recvText = $_POST['text'];
         $sql = "INSERT INTO react_php (id,texts) VALUES(1,?)";
         $pdo->prepare($sql)->execute([$recvText]);*/
-        $sql = "SELECT `product_id`, `product_name`, `product_brand`, `product_price`,`product_image` FROM `product` WHERE location='chd'";
+        $sql = "SELECT `id`,`shop_name`, `shop_image`, `shop_location` FROM `shop`";
         $res=$pdo->prepare($sql);
         $res->execute();
         $ans=$res->fetchAll(PDO::FETCH_OBJ);
-        $myData["first"]=$ans;
 
-        $sql = "SELECT `product_id`, `product_name`, `product_brand`, `product_price`,`product_image` FROM `product` WHERE location='moh'";
-        $res = $pdo->prepare($sql);
-        $res->execute();
-        $ans = $res->fetchAll(PDO::FETCH_OBJ);
-        $myData["second"]=$ans;
-
-        echo json_encode($myData);
+        echo json_encode($ans);
     } catch (\PDOException $e) {
         throw new \PDOException($e->getMessage(), (int)$e->getCode());
     }
