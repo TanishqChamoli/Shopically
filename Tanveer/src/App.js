@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import HomePage from './HomePage';
 import SearchPage from './SearchPage';
+import ShopPage from './ShopPage';
+import ProductPage from './ProductPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +25,16 @@ class App extends Component{
         <SearchPage />
       );
     }
+    function Shop() {
+      return (
+        <ShopPage />
+      );
+    }
+    function Product() {
+      return (
+        <ProductPage />
+      );
+    }
     return (
       <Router>
         <div>
@@ -32,6 +44,12 @@ class App extends Component{
             </Route>
             <Route path="/search">
               <Search />
+            </Route>
+            <Route path="/shop">
+              <Shop />
+            </Route>
+            <Route path="/product">
+              <Product />
             </Route>
           </Switch>
         </div>

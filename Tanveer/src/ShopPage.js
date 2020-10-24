@@ -1,13 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import FullSearchPage from './FullSearchPage';
-class SearchPage extends React.Component {
+import ShopDetail from './ShopDetail';
+class ShopPage extends React.Component {
     render() {
         return (
             <div>
-                <FullSearchPage/>
+                <ShopDetail />
             </div>
         );
     }
 }
-export default withRouter(SearchPage);
+export default withRouter(ShopPage);

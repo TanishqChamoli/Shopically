@@ -1,13 +1,13 @@
 import React from "react";
-import CarouselPage from "./CarouselPage";
-import SearchHome from './SearchHome';
+import HomeCarouselPage from "./HomeCarouselPage";
+import HomeSearchBar from './HomeSearchBar';
 
 class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <SearchHome />
-        <CarouselPage/>
+        <HomeSearchBar />
+        <HomeCarouselPage/>
       </div>
     );
   }
