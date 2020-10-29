@@ -1,0 +1,54 @@
+div.d-flex{
+    align-items: flex-end;
+}
+.shop-img{
+    float: right;
+    margin-right: 1%;
+    height: 100%;
+}
+.shopImg{
+    height: 20em;
+}
+
+.shop-head{
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    padding: 2%;
+    overflow: auto;
+}
+
+.shop-detail {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 2%;
+}
+    
+    
+.display-4{
+    max-height: max-content;
+    text-align: left;
+    font-size: 5em;
+}
+.lead{
+    text-align: left;
+    font-size: 2em;
+}
+.R-search{
+    margin-left: 400px;
+}
+
+.aside{
+    margin-right:3rem;
+    width:200px;
+}
+div.card{
+    width:18rem;
+    margin:4rem 6rem 2rem 6rem;
+}
+.side-card{
+    display:flex;
+}

@@ -1,0 +1,75 @@
+div.card{
+    width:20%;
+    height:40%;
+    margin:10% 20%;
+    background-color: royalblue;
+    border-style: groove;
+    border-width: medium;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.d-flex{
+    justify-content: center;
+}
+.card-title{
+    color: whitesmoke;
+}
+.card-caption{
+    color: gold;
+}
+.card-text{
+    color: white;
+}
+
+button.btn-tag{
+    background-color: rgb(35, 76, 199);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.flex-item{
+    flex-grow: 1;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+.flex-item-last2{
+    flex-grow:1;
+    margin-right:5%;
+    margin-left:10%;
+}
+.main-div{
+    width:85%;
+    background-color:rgba(238, 238, 238, 0.8);
+}
+.side-nav{
+    width:400px;
+    background-color: rgb(243, 91, 116);
+}
+.side-nav>h1{
+    color: ghostwhite;
+    text-align: center;
+}
+
+.side-nav>ul {
+    list-style-type: none;
+    margin-left: 10%;
+    margin-top: 10;
+    width: 200px;
+}
+
+.side-nav>ul>li a {
+    display: block;
+    color: ghostwhite;
+    padding: 10% 8%;
+    text-decoration: none;
+    
+}
+
+.side-nav>ul>li a:hover {
+    background-color:ghostwhite;
+    color: rgb(243, 91, 116);
+}
+.aside{
+    margin-right:3rem;
+    width:200px;
+}
+

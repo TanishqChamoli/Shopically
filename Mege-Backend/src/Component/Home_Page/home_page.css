@@ -1,0 +1,99 @@
+.search_header {
+    max-width: 100%;
+    height: auto;
+    padding: 5% 3%;
+    background-color: royalblue;
+    overflow: auto;
+}
+
+.brand {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.tag {
+    text-align: center;
+    color: royalblue;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5%;
+}
+
+.second-div {
+    display: inline-block;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.city {
+    background-color: whitesmoke;
+    color: black;
+    padding: 1%;
+    width: 20%;
+    outline:none;
+}
+
+.item {
+    background-color: whitesmoke;
+    color: black;
+    padding: 1%;
+    width: 20%;
+    outline:none;
+}
+
+.search {
+    position: absolute;
+    right: 10%;
+    width: 30%;
+    padding: 0.75%;
+    background-color: whitesmoke;
+}
+
+.third-div {
+    display: inline-block;
+    width: 80%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.detectButton {
+    background-color: orange;
+    color: black;
+    width: 20%;
+    position: absolute;
+    padding: 1% 0%;
+    border: none;
+    outline:none;
+    border: 1px solid orange;
+    border-radius:10px;
+}
+
+.submitButton {
+    background-color: orange;
+    color: black;
+    width: 20%;
+    position: absolute;
+    right: 10%;
+    padding: 1% 0%;
+    border: 1px solid orange;
+    border-radius:10px;
+    outline:none;
+}
+
+.detectButton:hover {
+    background-color: red;
+    color: white;
+    border:1px solid red;
+}
+
+.submitButton:hover {
+    background-color: red;
+    color: white;
+    border:1px solid red;
+}
