@@ -1,0 +1,1 @@
+\Xampp\htdocs\shopically\my-app
