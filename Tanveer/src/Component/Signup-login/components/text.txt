@@ -1,0 +1,38 @@
+state = {
+    email: '',
+    password: '',
+    login_data: []
+  }
+  componentDidMount() {
+    const url = 'http://localhost/website_backend/login_backend.php'
+    axios.get(url).then(response => response.data)
+      .then((data) => {
+        this.setState({ login_data: data })
+        console.log(this.state.login_data)
+      })
+  }
+  handleFormSubmit(event) {
+    event.preventDefault();
+    // console.log(this.state);
+    $: login_data = new login_data();
+    login_data.append('email', this.state.email)
+    login_data.append('password', this.state.password)
+    axios({
+      method: 'post',
+      url: 'http://localhost/website_backend/login_backend.php',
+      data: login_data,
+      config: { headers: { 'Content-Type': 'multipart/form-data' } }
+    })
+      .then(function (response) {
+        //handle success
+        console.log(response)
+
+      })
+      .catch(function (response) {
+        //handle error
+        console.log(response)
+      });
+  }
+
+
+  value={this.state.email} onChange={e => this.setState({ email: e.target.value })}

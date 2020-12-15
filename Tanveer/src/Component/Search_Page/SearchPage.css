@@ -1,0 +1,70 @@
+.search_header{
+    margin-bottom: 50px;
+}
+.prdt-cards{
+    background-color: #eee;
+    box-shadow: 0px 0px 20px -10px gray;
+}
+.acity {
+    background-color: whitesmoke;
+    color: black;
+    padding: 5px;
+    outline:none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px darkblue;
+}
+
+.aitem {
+    background-color: whitesmoke;
+    color: black;
+    padding: 5px;
+    outline:none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px darkblue;
+    margin-left: 10px;
+}
+
+.searchBar {
+    border: 1px solid darkgray;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: #eee;
+    margin-left: 10px;
+}
+.searchBar:focus{
+    box-shadow: 0px 0px 5px 0px royalblue;
+}
+
+.sButton {
+    background-color: orange;
+    color: black;
+    width: 80px;
+    padding: 8px;
+    border: 1px solid orange;
+    border-radius:10px;
+    outline:none;
+    box-shadow: 5px 5px 10px 0px darkblue;
+    margin-left: 10px;
+}
+
+.sButton:hover {
+    background-color: red;
+    color: white;
+    border:1px solid red;
+}
+@media only screen and (max-width : 450px)
+{
+    .searchBar{
+        position:relative;
+        margin-left: 10%;
+        margin-top: 10px;
+        width: 80%;
+    }
+    .sButton{
+        margin-left: 10px;
+    }
+}

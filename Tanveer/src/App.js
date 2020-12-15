@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomePage from './HomePage';
-import SearchPage from './SearchPage';
-import ShopPage from './ShopPage';
-import ProductPage from './ProductPage';
+import HomePage from './Component/Home_Page/HomePage';
+import SearchPage from './Component/Search_Page/SearchPage';
+import ProductDisplay from './Component/Product_Display_Page/ProductPage'
+import ShopDisplay from './Component/Shop_Display_Page/ShopPage'
+import CheckoutPage from './Component/Checkout/CheckoutPage'
+import Form from './Component/Signup-login/components/form'
+import Signup from './Component/Signup-login/components/signup'
+import Forgot from './Component/Signup-login/components/forgot_pass'
+import AccountForm from './Component/Signup-login/components/Accountform'
+import Buynow from './Component/buynow/buy'
+import AddProduct from "./Component/Signup-login/components/addproduct"
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,44 +20,41 @@ import {
 
 class App extends Component{
   render() {
-    function Home() {
-      return (
-        <div>
-          <HomePage/>
-        </div>
-      );
-    }
-    function Search() {
-      return (
-        <SearchPage />
-      );
-    }
-    function Shop() {
-      return (
-        <ShopPage />
-      );
-    }
-    function Product() {
-      return (
-        <ProductPage />
-      );
-    }
     return (
       <Router>
         <div>
           <Switch>
             <Route exact path="/">
-              <Home />
+              <HomePage />
             </Route>
             <Route path="/search">
-              <Search />
-            </Route>
-            <Route path="/shop">
-              <Shop />
+              <SearchPage />
             </Route>
             <Route path="/product">
-              <Product />
+              <ProductDisplay />
             </Route>
+            <Route path="/shop">
+              <ShopDisplay />
+            </Route>
+            <Route path="/cartpage">
+              <CheckoutPage/>
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+            <Route path="/login">
+              <Form />
+            </Route>
+            <Route path="/forgot">
+              <Forgot />
+            </Route>
+            <Route path="/accountform">
+              <AccountForm />
+            </Route>
+            <Route path="/buynow">
+              <Buynow/>
+            </Route>
+            <Route exact path="/addproduct" component={AddProduct} />
           </Switch>
         </div>
       </Router>
@@ -59,31 +63,3 @@ class App extends Component{
 }
 
 export default App;
-
-
-/*state={
-text:""
-};
-handleAdd= async e=>{
-await this.setState({
-  text:e.target.value
-})
-}
-handleSubmit=e=>{
-e.preventDefault();
-console.log(this.state.text);
-let formData=new FormData();
-formData.append("text",this.state.text);
-const url="http://localhost:80/homepage/my-app/backend/";
-axios.post(url,formData)
-.then(res=>console.log(res.data))
-.catch(err=>console.log(err));
-}
-render(){
-return(
-  <div className="App-header">
-    <input type="text" id="text" onChange={this.handleAdd}/>
-    <button type="submit" id="submit" onClick={this.handleSubmit}>Save</button>
-  </div>
-);
-}*/

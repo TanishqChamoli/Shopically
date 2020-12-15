@@ -1,0 +1,37 @@
+.shop-head{
+    padding: 20px;
+    background: linear-gradient(90deg, #4169E1 0%, rgba(65, 105, 225, 0.60) 100%);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.shop-head img{
+    min-height: 200px;
+    border-radius: 20px;
+}
+.searchBar{
+    margin-bottom: 20px;
+}
+.searchBar input{
+    width: 50%;
+    border: 1px solid grey;
+    border-radius: 5px 0px 0px 5px;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+.searchBar button{
+    height: 32px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #eee;
+}
+.searchBar input:focus{
+    box-shadow: 0px 0px 5px 0px royalblue;
+}
+.prdt-cards{
+    background-color: #eee;
+    box-shadow: 0px 0px 20px -10px gray;
+}
