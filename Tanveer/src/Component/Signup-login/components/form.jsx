@@ -16,6 +16,7 @@ class Form extends Component {
     this.accountform = this.accountform.bind(this);
   }
   signup() {
+
     window.open("/signup", "_self");
     //let path = '/signup';
     //this.props.history.push(path);
@@ -23,14 +24,12 @@ class Form extends Component {
     // this.props.history.push(path);
   }
   forgotPassword() {
-    // let path = '/forgot';
-    // this.props.history.push(path);
-    window.open("/forgot", "_self");
+    let path = '/forgot';
+    this.props.history.push(path);
   }
   accountform() {
-    // let path = '/accountform';
-    // this.props.history.push(path);
-    window.open("/accountform", "_self");
+    let path = '/accountform';
+    this.props.history.push(path);
   }
   handleAdd = async (e) => {
     this.setState({
@@ -42,17 +41,21 @@ class Form extends Component {
     let formData = new FormData();
     formData.append("email", this.state.email);
     formData.append("pass", this.state.password);
-    const url = "http://localhost:80/shopically/my-app/backend/login_backend.php";
+    const url = "http://localhost:80/shopically/my-app/backend/login_backend.php"; 
     axios.post(url, formData)
       .then((res) => {
         console.log(res);
-        if (res.data!="FAIL"){
-          //Set new random id
+        if (res.data == 'FAIL'){
+          window.open("/login","_self");
+        }
+        else{
           sessionStorage.setItem("uid",res.data);
           window.open("/","_self")
+          console.log(res.data);
         }
       })
       .catch((err) => console.log(err));
+      // window.open("/login","_self");
   };
   render() {
     return (
@@ -66,6 +69,7 @@ class Form extends Component {
           <div class="form_login">
           <h1 class="formname">Sign-In</h1>
           <br/>
+          <form className="form_login">
             <h4 class="input-tag">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="input-feed" type="email" name="email" onChange={this.handleAdd}/></h4>
             <h4 class="input-tag">Password: <input id="input-feed" type="password" name="password" onChange={this.handleAdd}/></h4>
             &nbsp;&nbsp;&nbsp;
@@ -73,6 +77,7 @@ class Form extends Component {
             <button class="btn btn-primary signin-button" onClick={this.forgotPassword}>Forgot Password?</button>&nbsp;&nbsp;&nbsp;<br/>
             <button class="btn btn-success signin-button" onClick={this.signup}>Create New Account</button>&nbsp;&nbsp;&nbsp;
             <button class="btn btn-success signin-button" onClick={this.accountform}>Register for new shop</button>
+            </form>
           </div>
         </div>
     )
