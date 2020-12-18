@@ -1,0 +1,43 @@
+.forget-header {
+    max-width: 100%;
+    height: auto;
+    padding: 5% 3%;
+    background-color: royalblue;
+    overflow: auto;
+}
+.forgetName {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.forgetName2 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 4em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#for{
+    text-align: center;
+}
+
+.forget-form {
+    margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      margin-top: 2%;
+      max-width: 70%;
+      background-color: lightgray;
+      padding: 3%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align:center;
+      margin-bottom: 2%;
+  }
+
+  .forget-button{
+    text-align: center;
+    width:12em;
+    margin-bottom:2%
+  }

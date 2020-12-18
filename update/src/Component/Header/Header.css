@@ -1,0 +1,23 @@
+.flex-container{
+    display:flex;
+    width:100%;
+}
+.flex-container a {
+    max-width: 300px;
+}
+.flex-container div{
+    max-width: 900px;
+    width: 40%;
+}
+input {
+    width: 50%;
+}
+.navbar-brand {
+   
+}
+.flex-item{
+    flex-grow:1;
+}
+.flex-item-last{
+    margin-left:auto;
+}

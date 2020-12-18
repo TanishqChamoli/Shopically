@@ -1,0 +1,163 @@
+.search_header {
+    max-width: 100%;
+    height: auto;
+    padding: 5% 3%;
+    background-color: rgb(65, 105, 225);
+    overflow: auto;
+    box-shadow: 0px 10px 10px -10px grey;
+}
+.div-second-div{
+    display:inline-block;
+    width:100%;
+}
+.brand {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.simple_text {
+    text-align: center;
+    color: royalblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 300%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.second-div {
+    display: inline-block;
+    margin-top: 5%;
+    width:50%;
+    margin-left: 10%;
+}
+
+.city {
+    background-color: whitesmoke;
+    color: black;
+    padding: 1%;
+    outline:none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px darkblue;
+}
+
+.item {
+    background-color: whitesmoke;
+    color: black;
+    padding: 1%;
+    outline:none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px darkblue;
+}
+
+.searchbar {
+    position: absolute;
+    right: 10%;
+    width: 30%;
+    padding-top: 0.5%;
+    padding-bottom: 0.25%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 4px solid darkgray;
+    outline: none;
+    box-shadow: 0px 0px 10px 0px darkblue;
+}
+.searchbar:focus{
+    box-shadow: 0px 0px 8px 0px darkgray;
+}
+
+.third-div {
+    display: inline-block;
+    width: 80%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.detectButton {
+    background-color: orange;
+    color: black;
+    width: 20%;
+    position: absolute;
+    padding: 1% 0%;
+    border: none;
+    outline:none;
+    border: 1px solid orange;
+    border-radius:10px;
+    box-shadow: 5px 5px 10px 0px darkblue;
+}
+
+.submitButton {
+    background-color: orange;
+    color: black;
+    width: 20%;
+    position: absolute;
+    right: 10%;
+    padding: 1% 0%;
+    border: 1px solid orange;
+    border-radius:10px;
+    outline:none;
+    box-shadow: 5px 5px 10px 0px darkblue;
+}
+
+.detectButton:hover {
+    background-color: red;
+    color: white;
+    border:1px solid red;
+}
+
+.submitButton:hover {
+    background-color: red;
+    color: white;
+    border:1px solid red;
+}
+@media only screen and (max-width : 450px)
+{
+    .complete-div{
+        display:flex;
+    }
+    .searchbar{
+        position:relative;
+        margin-left: 10%;
+        margin-top: 10px;
+        width: 80%;
+    }
+    .second-div{
+        flex-grow:1;
+        margin:auto;
+    }
+    .third-div{
+        flex-grow:1;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        width:auto;
+    }
+    .second-div{
+        display:flex;
+        flex-direction:column;
+    }
+    .detectButton{
+        position:relative;
+        width:auto;
+        margin-bottom: 10px;
+    }
+    .submitButton{
+        position:relative;
+        width:auto;
+        margin-left: 10%;
+    }
+}
+.show_cards{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eee;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0px 0px 20px -10px gray;
+}
