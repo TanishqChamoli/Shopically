@@ -1,0 +1,38 @@
+.buy-main{
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-top: 2%;
+    max-width: 70%;
+    background-color: lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title{
+    text-align: center;
+    color: black;
+    padding: 2%;
+    font-size: 3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.order{
+    margin: center;
+}
+.buynowlablel{
+    width:50%;
+    font-size:2em;
+    height:3em;
+    margin-left:auto;
+    margin-right:auto;
+}
+.buynowform{
+    text-align:center;
+}
+.buynowbutton{
+    width:10%;
+    margin-bottom:2%
+}
+.buynowinput{
+    margin-right:auto;
+} 
