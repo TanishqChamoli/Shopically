@@ -1,4 +1,5 @@
 <?php
+    require("mosif.php");
     $host = 'localhost';
     $db   = 'admin_shopically';
     $user = 'admin_dbuser';
