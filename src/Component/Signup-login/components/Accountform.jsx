@@ -41,7 +41,7 @@ export class AccountForm extends Component {
         formData.append("shop_pincode", this.state.shop_pincode);
         formData.append("city", this.state.city);
         formData.append("state", this.state.state);
-        const url = "http://localhost/homepage/my-app/backend/shop_signup.php";
+        const url = "http://shopically.co.in/shopically/my-app/backend/shop_signup.php";
         axios
             .post(url, formData)
             .then((res) => alert(res.data))

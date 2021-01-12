@@ -35,7 +35,7 @@ export class AddProduct extends Component {
     formData.append("tag", this.state.tag);
     formData.append("material", this.state.material);
     formData.append("product_description", this.state.product_description);
-    const url = "http://localhost/homepage/my-app/backend/addproduct.php";
+    const url = "http://shopically.co.in/shopically/my-app/backend/addproduct.php";
     axios
       .post(url, formData)
       .then((res) => {
