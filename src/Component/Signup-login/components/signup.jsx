@@ -3,6 +3,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 import './signup.css'
+import { config } from '../common/Constants'
+
 class Signup extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +51,7 @@ class Signup extends Component {
     formData.append("gender", this.state.gender);
     formData.append("address", this.state.address);
     formData.append("pincode", this.state.pincode);
-    const url = "http://localhost:80/shopically/my-app/backend/signup.php";
+    const url = config.url.API_URL +"shopically/my-app/backend/signup.php";
     axios
       .post(url, formData)
       .then((res) => {

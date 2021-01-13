@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from "axios";
 import './Accountform.css'
+import { config } from '../common/Constants'
+
 export class AccountForm extends Component {
     constructor(props) {
         super(props);
@@ -41,7 +43,7 @@ export class AccountForm extends Component {
         formData.append("shop_pincode", this.state.shop_pincode);
         formData.append("city", this.state.city);
         formData.append("state", this.state.state);
-        const url = "http://localhost/homepage/my-app/backend/shop_signup.php";
+        const url = config.url.API_URL +"shopically/my-app/backend/shop_signup.php";
         axios
             .post(url, formData)
             .then((res) => alert(res.data))

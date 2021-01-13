@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import './ShopDisplay.css';
+import { config } from '../common/Constants'
 
 class ShopPage extends React.Component {
     constructor(props) {
@@ -36,7 +37,7 @@ class ShopPage extends React.Component {
             if (this.state.brands != null && this.state.brands != '')
                 formData.append("brands", this.state.brands);
 
-            const phpurl = "http://localhost:80/shopically/my-app/backend/shopdisplaypage.php";
+            const phpurl = config.url.API_URL+"shopically/my-app/backend/shopdisplaypage.php";
             axios.post(phpurl, formData)
                 .then(response => {
                     if (response.data.products != this.state.items)
@@ -54,7 +55,7 @@ class ShopPage extends React.Component {
         let params = queryString.parse(url);
         let formData = new FormData();
         formData.append("sid", params["id"]);
-        const phpurl = "http://localhost:80/shopically/my-app/backend/shopdisplaypage.php";
+        const phpurl = config.url.API_URL+"shopically/my-app/backend/shopdisplaypage.php";
         axios.post(phpurl, formData)
             .then(response => {
                 this.setState({

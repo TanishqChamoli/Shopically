@@ -4,6 +4,7 @@ import {
 } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 import './Card.css'
+import { config } from '../common/Constants'
 
 export default class Cards extends React.Component {
     constructor(props) {
@@ -48,7 +49,7 @@ export default class Cards extends React.Component {
                     </Card.Body>
                 </Card> */}
                 <a style={{ cursor: 'pointer' }} href={"/product?id=" + this.props.id}>
-                    <img src={"http://localhost/shopically/my-app/image/" + this.props.imageURL} className="prdt-img"/>
+                    <img src={config.url.API_URL +"shopically/my-app/image/" + this.props.imageURL} className="prdt-img"/>
                     <div className="card-dtls">
                     <div className="prdt-name">{this.props.productName}</div>
                     <div className="prdt-btns">

@@ -5,7 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
-import Header from '../Header/Header' 
+import Header from '../Header/Header'
+import { config } from '../common/Constants'
 
 class buynow extends React.Component {
     constructor(props) {
@@ -40,7 +41,7 @@ class buynow extends React.Component {
         let cartItems = localStorage.getItem("productsInCart");
         let formData = new FormData();
         formData.append("cartItems", cartItems);
-        const phpurl = "http://localhost:80/shopically/my-app/backend/buynow.php";
+        const phpurl = config.url.API_URL +"shopically/my-app/backend/buynow.php";
         axios.post(phpurl, formData)
             .then(response => {
                 this.setState({

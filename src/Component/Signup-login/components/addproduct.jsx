@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { config } from '../common/Constants'
 
 export class AddProduct extends Component {
   constructor(props) {
@@ -44,7 +45,7 @@ export class AddProduct extends Component {
     formData.append("material", this.state.material);
     formData.append("product_description", this.state.product_description);
     formData.append("product_images",this.state.product_images);
-    const url = "http://localhost:80/shopically/my-app/backend/addproduct.php";
+    const url = config.url.API_URL +"shopically/my-app/backend/addproduct.php";
     axios.post(url, formData)
       .then((res) => {
         console.log(res.data);

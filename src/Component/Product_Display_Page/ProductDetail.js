@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
+import { config } from '../common/Constants'
 
 class ShopPage extends React.Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class ShopPage extends React.Component {
         let params = queryString.parse(url);
         let formData = new FormData();
         formData.append("id", params["id"]);
-        const phpurl = "http://localhost:80/shopically/my-app/backend/productdisplaypage.php";
+        const phpurl = config.url.API_URL +"shopically/my-app/backend/productdisplaypage.php";
         axios.post(phpurl, formData)
             .then(response => {
                 this.setState({
@@ -55,7 +56,7 @@ class ShopPage extends React.Component {
     render() {
         return (
                 <div  className="prdt_img_detail">
-                <img className="prdt_img" src={"http://localhost/shopically/my-app/image/"+this.state.product_info.product_image}  fluid="true" />
+                <img className="prdt_img" src={config.url.API_URL +"shopically/my-app/image/"+this.state.product_info.product_image}  fluid="true" />
                     <div className="prdt_sum">
                         <h1 className="prdt_name">{this.state.product_info.productName}</h1><br /><br />
                         <p className="prdt_details">{this.state.product_info.desc}</p>

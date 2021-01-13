@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import './forgot.css'
+import { config } from '../common/Constants'
+
 class Forgot extends Component {
     constructor(props) {
         super(props);
@@ -31,7 +33,7 @@ class Forgot extends Component {
         formData.append("email", this.state.email);
         formData.append("pass", this.state.password);
         formData.append("cpass", this.state.cpassword);
-        const url = "http://localhost:80/Website_backend/forgot_pass_backend.php";
+        const url = config.url.API_URL +"shopically/my-app/backend/forgot_pass_backend.php";
         axios
             .post(url, formData)
             .then((res) => alert(res.data))

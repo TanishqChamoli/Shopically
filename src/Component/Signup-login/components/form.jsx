@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // import { useHistory } from 'react-router-dom';
 import "./form_login.css";
 import axios from "axios";
+import { config } from '../common/Constants'
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -42,7 +44,7 @@ class Form extends Component {
     let formData = new FormData();
     formData.append("email", this.state.email);
     formData.append("pass", this.state.password);
-    const url = "http://localhost:80/shopically/my-app/backend/login_backend.php";
+    const url = config.url.API_URL +"shopically/my-app/backend/login_backend.php";
     axios.post(url, formData)
       .then((res) => {
         console.log(res);

@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import './ProductPage.css';
 import Header from '../Header/Header'
+import { config } from '../common/Constants'
+
 class ProductPage extends React.Component {
     render() {
         return (

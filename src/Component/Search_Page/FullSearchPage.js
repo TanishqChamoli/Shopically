@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
+import { config } from '../common/Constants'
 
 class FullSearchPage extends React.Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class FullSearchPage extends React.Component {
             if (this.state.brands != null && this.state.brands != '')
                 formData.append("brands", this.state.brands);
 
-            const phpurl = "http://localhost:80/shopically/my-app/backend/searchpage.php";
+            const phpurl = config.url.API_URL +"shopically/my-app/backend/searchpage.php";
             axios.post(phpurl, formData)
                 .then(response => {
                     if (response.data != this.state.items)
@@ -55,7 +56,7 @@ class FullSearchPage extends React.Component {
         formData.append("q", params["q"]);
         formData.append("sby", params["sby"]);
         formData.append("loc", params["loc"]);
-        const phpurl = "https://shopically.co.in/shopically/my-app/backend/searchpage.php";
+        const phpurl = config.url.API_URL +"shopically/my-app/backend/searchpage.php";
         axios.post(phpurl, formData)
             .then(response => {
                 this.setState({
