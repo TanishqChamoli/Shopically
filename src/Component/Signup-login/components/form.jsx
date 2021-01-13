@@ -42,7 +42,7 @@ class Form extends Component {
     let formData = new FormData();
     formData.append("email", this.state.email);
     formData.append("pass", this.state.password);
-    const url = "http://shopically.co.in/shopically/my-app/backend/login_backend.php";
+    const url = "http://localhost:80/shopically/my-app/backend/login_backend.php";
     axios.post(url, formData)
       .then((res) => {
         console.log(res);

@@ -19,7 +19,7 @@ class Checkout extends React.Component {
         let formData = new FormData();
         formData.append("uid", sessionStorage.getItem("uid"));
         formData.append("productsInCart", localStorage.getItem("productsInCart"));
-        const phpurl = "http://shopically.co.in/shopically/my-app/backend/orderplaced.php";
+        const phpurl = "http://localhost:80/shopically/my-app/backend/orderplaced.php";
         axios.post(phpurl,formData)
             .then(response => {
                 if(response.data!="FAIL")
@@ -33,7 +33,7 @@ class Checkout extends React.Component {
         event.preventDefault();
     }
     componentDidMount() {
-        const phpurl = "http://shopically.co.in/shopically/my-app/backend/checkout.php";
+        const phpurl = "http://localhost:80/shopically/my-app/backend/checkout.php";
         axios.post(phpurl,"uid="+sessionStorage.getItem("uid"))
             .then(response => {
                 this.setState({

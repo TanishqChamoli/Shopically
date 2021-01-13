@@ -20,7 +20,7 @@ class ShopPage extends React.Component {
         let params = queryString.parse(url);
         let formData = new FormData();
         formData.append("id", params["id"]);
-        const phpurl = "http://shopically.co.in/shopically/my-app/backend/productdisplaypage.php";
+        const phpurl = "http://localhost:80/shopically/my-app/backend/productdisplaypage.php";
         axios.post(phpurl, formData)
             .then(response => {
                 this.setState({

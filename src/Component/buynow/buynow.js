@@ -16,7 +16,7 @@ class buynow extends React.Component {
         this.handleCheckout = this.handleCheckout.bind(this);
     }
     handleCheckout(event) {
-        /*const phpurl = "http://shopically.co.in/shopically/my-app/backend/checkforlogin.php";
+        /*const phpurl = "http://localhost:80/shopically/my-app/backend/checkforlogin.php";
         axios.get(phpurl)
             .then(response => {
                 if (response.data === "UserLoggedIn"){
@@ -40,7 +40,7 @@ class buynow extends React.Component {
         let cartItems = localStorage.getItem("productsInCart");
         let formData = new FormData();
         formData.append("cartItems", cartItems);
-        const phpurl = "http://shopically.co.in/shopically/my-app/backend/buynow.php";
+        const phpurl = "http://localhost:80/shopically/my-app/backend/buynow.php";
         axios.post(phpurl, formData)
             .then(response => {
                 this.setState({

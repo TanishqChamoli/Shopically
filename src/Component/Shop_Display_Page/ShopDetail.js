@@ -36,7 +36,7 @@ class ShopPage extends React.Component {
             if (this.state.brands != null && this.state.brands != '')
                 formData.append("brands", this.state.brands);
 
-            const phpurl = "http://shopically.co.in/shopically/my-app/backend/shopdisplaypage.php";
+            const phpurl = "http://localhost:80/shopically/my-app/backend/shopdisplaypage.php";
             axios.post(phpurl, formData)
                 .then(response => {
                     if (response.data.products != this.state.items)
@@ -54,7 +54,7 @@ class ShopPage extends React.Component {
         let params = queryString.parse(url);
         let formData = new FormData();
         formData.append("sid", params["id"]);
-        const phpurl = "http://shopically.co.in/shopically/my-app/backend/shopdisplaypage.php";
+        const phpurl = "http://localhost:80/shopically/my-app/backend/shopdisplaypage.php";
         axios.post(phpurl, formData)
             .then(response => {
                 this.setState({

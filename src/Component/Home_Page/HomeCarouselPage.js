@@ -1,8 +1,7 @@
 import React from 'react';
 import ShopCard from './ShopCard';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import axios from 'axios';
+import { config } from '../common/Constants'
 
 export default class HomeCarouselPage extends React.Component {
     constructor() {
@@ -13,7 +12,7 @@ export default class HomeCarouselPage extends React.Component {
     }
 
     componentDidMount() {
-        const url = "http://shopically.co.in/shopically/my-app/backend/homepagedata.php";
+        const url = config.url.API_URL+"shopically/my-app/backend/homepagedata.php";
         axios.get(url)
         .then(response => {
             this.setState({
@@ -26,7 +25,6 @@ export default class HomeCarouselPage extends React.Component {
     }
 
     render() {
-        
         const itemData = this.state.itemsData.map(item => 
             <ShopCard id={item.id} 
             // imageURL={item.shop_image} 
