@@ -55,7 +55,7 @@ class ShopPage extends React.Component {
     render() {
         return (
                 <div  className="prdt_img_detail">
-                    <img className="prdt_img"  src="https://images-na.ssl-images-amazon.com/images/I/71K788r-zAL._UX569_.jpg"  fluid="true" />
+                <img className="prdt_img" src={"http://localhost/shopically/my-app/image/"+this.state.product_info.product_image}  fluid="true" />
                     <div className="prdt_sum">
                         <h1 className="prdt_name">{this.state.product_info.productName}</h1><br /><br />
                         <p className="prdt_details">{this.state.product_info.desc}</p>

@@ -13,9 +13,11 @@ export class AddProduct extends Component {
       color: "",
       size: "",
       material: "",
-      product_description:""
+      product_description: "",
+      product_images: null
     };
     this.handleAdd = this.handleAdd.bind(this);
+    this.addProduct = this.addProduct.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleAdd = async (e) => {
@@ -23,8 +25,14 @@ export class AddProduct extends Component {
       [e.target.name]: e.target.value,
     });
   };
+  addProduct = async (e) => {
+    this.setState({
+      product_images: e.target.files[0],
+    });
+  };
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log(this.state.product_images);
     let formData = new FormData();
     formData.append("productname", this.state.productname);
     formData.append("brand", this.state.brand);
@@ -35,11 +43,11 @@ export class AddProduct extends Component {
     formData.append("tag", this.state.tag);
     formData.append("material", this.state.material);
     formData.append("product_description", this.state.product_description);
-    const url = "http://localhost/homepage/my-app/backend/addproduct.php";
-    axios
-      .post(url, formData)
+    formData.append("product_images",this.state.product_images);
+    const url = "http://localhost:80/shopically/my-app/backend/addproduct.php";
+    axios.post(url, formData)
       .then((res) => {
-        alert(res.data);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -50,61 +58,39 @@ export class AddProduct extends Component {
           <div>
             <h2>Add Product</h2>
           </div>
-          <form className="add_prdt_form">
-            <br />
-            <label>Product Name</label>
-            <br />
           
-            <input type="text" name="productname" onChange={this.handleAdd} />
-            <br />
-            <label>Brand</label>
-            <br />
+          <form onSubmit={this.handleSubmit} className="add_prdt_form">
+            <label>Product Name</label><br/>
+            <input type="text" name="productname" onChange={this.handleAdd} /><br/>
             
-            <input type="text" name="brand" onChange={this.handleAdd} />
-            <br />
-            <label>Category</label>
-            <br />
+            <label>Brand</label><br/>
+            <input type="text" name="brand" onChange={this.handleAdd} /><br/>
             
-            <input type="text" name="category" onChange={this.handleAdd} />
-            <br />
-            <label>Price</label>
-            <br />
-           
-            <input type="text" name="price" onChange={this.handleAdd} />
-            <br />
-            <label>Tag</label>
-            <br />
-           
-            <input type="text" name="tag" onChange={this.handleAdd} />
-            <br />
-            <label>Colour</label>
-            <br />
+            <label>Category</label><br/>
+            <input type="text" name="category" onChange={this.handleAdd} /><br/>
             
-            <input type="text" name="color" onChange={this.handleAdd} />
-            <br />
-            <label>Size</label>
-            <br />
-           
-            <input type="text" name="size" onChange={this.handleAdd} />
-            <br />         
-            <label>Material</label>
-            <br />
-           
-            <input type="text" name="material" onChange={this.handleAdd} />
-            <br />
-            <label>Product Description</label>
-            <br />
+            <label>Price</label><br/>
+            <input type="text" name="price" onChange={this.handleAdd} /><br/>
             
-            <input type="text" name="product_description" onChange={this.handleAdd} />
-            <br />
-            <input
-              id="sub"
-              name="submit"
-              type="submit"
-              onClick={this.handleSubmit}
-              value="Add Product"
-            />
-            <br />
+            <label>Tag</label><br/>
+            <input type="text" name="tag" onChange={this.handleAdd} /><br/>
+            
+            <label>Colour</label><br/>
+            <input type="text" name="color" onChange={this.handleAdd} /><br/>
+            
+            <label>Size</label><br/>
+            <input type="text" name="size" onChange={this.handleAdd} /><br/>         
+            
+            <label>Material</label><br/>
+            <input type="text" name="material" onChange={this.handleAdd} /><br/>
+            
+            <label>Product Description</label><br/>
+            <input type="text" name="product_description" onChange={this.handleAdd} /><br/>
+
+            <label>Product Images</label><br />
+            <input type="file" name="product_images" onChange={this.addProduct} /><br />
+            
+            <button id="sub" name="addProduct" className="sButton" type="submit">Add Product</button>
           </form>
         </div>
       </div>

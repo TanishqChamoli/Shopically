@@ -117,12 +117,7 @@ class ShopPage extends React.Component {
                         </aside>
                         <h2>Products</h2><br />
                         <div className="show-prdt">
-                            
-                            
                                 {itemData}
-                                {itemData}
-                                {itemData}
-                            
                         </div>
                         </div> 
                 

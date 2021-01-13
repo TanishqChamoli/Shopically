@@ -48,7 +48,7 @@ export default class Cards extends React.Component {
                     </Card.Body>
                 </Card> */}
                 <a style={{ cursor: 'pointer' }} href={"/product?id=" + this.props.id}>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71K788r-zAL._UX569_.jpg" className="prdt-img"/>
+                    <img src={"http://localhost/shopically/my-app/image/" + this.props.imageURL} className="prdt-img"/>
                     <div className="card-dtls">
                     <div className="prdt-name">{this.props.productName}</div>
                     <div className="prdt-btns">
