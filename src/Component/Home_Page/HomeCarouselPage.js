@@ -13,7 +13,7 @@ export default class HomeCarouselPage extends React.Component {
     }
 
     componentDidMount() {
-        const url = "https://shopically.co.in/shopically/my-app/backend/homepagedata.php";
+        const url = "http://shopically.co.in/shopically/my-app/backend/homepagedata.php";
         axios.get(url)
         .then(response => {
             this.setState({

@@ -49,7 +49,7 @@ class Signup extends Component {
     formData.append("gender", this.state.gender);
     formData.append("address", this.state.address);
     formData.append("pincode", this.state.pincode);
-    const url = "http://localhost:80/shopically/my-app/backend/signup.php";
+    const url = "http://shopically.co.in/shopically/my-app/backend/signup.php";
     axios
       .post(url, formData)
       .then((res) => {
