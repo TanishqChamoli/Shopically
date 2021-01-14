@@ -3,7 +3,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import './signup.css'
-import { config } from '../common/Constants'
+import { config } from '../../common/Constants'
 
 class Signup extends Component {
   constructor(props) {

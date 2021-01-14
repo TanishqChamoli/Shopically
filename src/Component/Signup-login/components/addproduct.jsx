@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { config } from '../common/Constants'
+import { config } from '../../common/Constants'
 
 export class AddProduct extends Component {
   constructor(props) {

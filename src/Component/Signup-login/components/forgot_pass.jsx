@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import './forgot.css'
-import { config } from '../common/Constants'
+import { config } from '../../common/Constants'
 
 class Forgot extends Component {
     constructor(props) {

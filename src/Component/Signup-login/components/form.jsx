@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { useHistory } from 'react-router-dom';
 import "./form_login.css";
 import axios from "axios";
-import { config } from '../common/Constants'
+import { config } from '../../common/Constants'
 
 class Form extends Component {
   constructor(props) {

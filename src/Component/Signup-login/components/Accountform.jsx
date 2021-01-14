@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios";
 import './Accountform.css'
-import { config } from '../common/Constants'
+import { config } from '../../common/Constants'
 
 export class AccountForm extends Component {
     constructor(props) {
