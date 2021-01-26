@@ -93,9 +93,9 @@ class FullSearchPage extends React.Component {
                     </form>
                 </div>
                 
-            <div className="d-flex">    
+            <div className="d-flex d-flex-div">    
                 <aside className="aside">
-                    <h1>Filters</h1>
+                    <h2 className="aside-h2">Filters</h2>
                     <form>
                         <ul>
                             <li>
@@ -119,7 +119,7 @@ class FullSearchPage extends React.Component {
                 </aside>
                 <div className="main-div">
                 <div className="res-cards">
-                        <h2>Result</h2>
+                        <h2 className="aside-h2">Result</h2>
                         <Row>
                             {itemData}
                         </Row>

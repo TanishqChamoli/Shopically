@@ -115,3 +115,29 @@ button.btn-tag{
     font-size: 225%;
     padding-bottom: 1%;
 }
+.d-flex-div{
+    width:100% !important;
+    margin-left:2%;
+}
+.aside-h2{
+    margin-left:2%;
+}
+@media only screen and (max-width: 1725px)
+{
+    .aside{
+        width:30%;
+    }
+}
+@media only screen and (max-width: 1690px)
+{
+    .aside{
+        width:20%;
+    }
+}  
+@media only screen and (max-width: 1000px)
+{
+    .aside{
+        width:40%;
+    }
+} 
+
