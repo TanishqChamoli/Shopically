@@ -17,7 +17,7 @@
     border: 0px solid black;
     width: 25%;
     height: 15%;
-    margin-left: 2%;
+    margin-left: 15%;
     transition: width 0.5s, height 0.5s;
     transition-timing-function: linear;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -157,14 +157,4 @@ td{
         margin-top:5%;
         text-align: center;
     }
-}
-.sm-prdt-img-container{
-    display:flex;
-    flex-direction:column;
-    margin-left:2%;
-    width:5%;
-}
-.sm-prdt-img{
-    width:100%;
-    margin-bottom:2%;
 }

@@ -6,7 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import { config } from '../common/Constants'
-
+import single from '../../single.jpg'
+import second_img from '../../second_pic.jpg'
+import third_img from '../../third_pic.jpg'
 class ShopPage extends React.Component {
     constructor(props) {
         super(props);
@@ -56,7 +58,13 @@ class ShopPage extends React.Component {
     render() {
         return (
                 <div  className="prdt_img_detail">
-                <img className="prdt_img" src={config.url.API_URL +"shopically/my-app/image/"+this.state.product_info.product_image}  fluid="true" />
+                <div className="sm-prdt-img-container">
+                    <img className="sm-prdt-img" src={single} />
+                    <img className="sm-prdt-img" src={second_img} />
+                    <img className="sm-prdt-img" src={third_img} />
+                </div>
+                <img className="prdt_img" src={single} />
+                {/* <img className="prdt_img" src={config.url.API_URL +"shopically/my-app/image/"+this.state.product_info.product_image}  fluid="true" /> */}
                     <div className="prdt_sum">
                         <h1 className="prdt_name">{this.state.product_info.productName}</h1><br /><br />
                         <p className="prdt_details">{this.state.product_info.desc}</p>
