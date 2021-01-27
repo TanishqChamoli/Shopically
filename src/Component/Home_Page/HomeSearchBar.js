@@ -54,6 +54,12 @@ class HomeSearchBar extends React.Component {
             </div> */}
           </div>
         </form>
+        <div className="scroll-Down">
+          <center>
+          Scroll Down<br />
+          <img className="scroll-Down-Arrow" src="Down Arrow.png" />
+          </center>
+        </div>
       </div>
     );
   }

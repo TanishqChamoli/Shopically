@@ -1,5 +1,6 @@
 import React from 'react';
 import ShopCard from './ShopCard';
+import Header from '../Header/Header'
 import axios from 'axios';
 import { config } from '../common/Constants'
 
@@ -34,6 +35,7 @@ export default class HomeCarouselPage extends React.Component {
 
         return (
             <div>
+                <Header />
                 <div className="simple-text">
                     <center>
                         Shops Available

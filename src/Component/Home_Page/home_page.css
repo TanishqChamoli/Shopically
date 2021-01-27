@@ -1,10 +1,18 @@
 .search_header {
     max-width: 100%;
     height: auto;
-    padding: 5% 3%;
-    background-color:#0a3f4d;
+    /* padding: 10% 3%; */
+    padding-top: 5%;
+    padding-bottom: 0%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    background: linear-gradient(180deg, #0A3F4D 0%, #0F343E 81.77%, #0B242B 100%);;
     overflow: auto;
     box-shadow: 0px 10px 10px -10px grey;
+}
+.searchform{
+    margin-top: 6%;
+    margin-bottom: 5%;
 }
 .div-second-div{
     display:inline-block;
@@ -28,8 +36,9 @@
 .second-div {
     display: inline-block;
     margin-top: 5%;
+    margin-bottom: 5%;
     width:50%;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 
 .city {
@@ -123,23 +132,26 @@
 .show_cards{
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #eee; */
+    background: white;
     /* width: 90%; */
-    padding-left: 5%;
-    padding-right: 5%;
-    background: #eee;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    border: 1px solid black;
     /* box-shadow: 0px 0px 20px -10px gray; */
 }
 .simple-text{
     font-size: 300%;
     padding-top: 1%;
     padding-bottom: 1%;
+    margin-top: 1%;
     background: #eee;
 }
 .show_cards{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 div.shop-card{
     margin-left:auto;
@@ -154,9 +166,18 @@ div.shop-card{
     height: 500px;
     width: 800px;
     margin-left: 0%;
-    margin-right: -8%;
+    margin-right: 5%;
     margin-top: 0%;
     margin-bottom: 0%;
+}
+.scroll-Down{
+    font-size: 48px;
+    color: black;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+.scroll-Down-Arrow{
+    width: 5%;
 }
 .sidenav {
     height: 100%;

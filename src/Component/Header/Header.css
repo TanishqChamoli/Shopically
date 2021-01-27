@@ -1,3 +1,8 @@
+.navbar{
+    background: #0A3F4D;
+    color: white;
+}
+
 .flex-container{
     display:flex;
     flex-wrap: wrap;

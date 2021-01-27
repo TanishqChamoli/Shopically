@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class header extends Component {
     render() {
         return(
-            <nav className="navbar navbar-light bg-light">
+            <nav className="navbar">
                 <div className="flex-container">
                     <Logo />
                     <Location/>
