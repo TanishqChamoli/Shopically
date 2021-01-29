@@ -75,7 +75,7 @@ class FullSearchPage extends React.Component {
                 productName={item.product_name}
                 desc={item.category} price={item.price} />)
         return (
-            <div>
+            <div className="bg-search">
                 <div className="searchSection">
                     <img src="logo final.png" className="header_logo" />
                     <form onSubmit={this.handleSubmit} className="header_search_form">
@@ -92,7 +92,9 @@ class FullSearchPage extends React.Component {
                         <button className="sButton" type="submit">Search</button>
                     </form>
                 </div>
-                
+            <div className="pre-search" >
+                Searched for "Gold"
+            </div>
             <div className="d-flex d-flex-div">    
                 <aside className="aside">
                     <h2 className="aside-h2">Filters</h2>
@@ -118,14 +120,19 @@ class FullSearchPage extends React.Component {
                     </form>
                 </aside>
                 <div className="main-div">
-                <div className="res-cards">
+                
                         <h2 className="aside-h2">Result</h2>
-                        <Row>
+                        <div className="card-displays">
                             {itemData}
-                        </Row>
+                            {itemData}
+                            {itemData}
+                            {itemData}
+                            {itemData}
+                            {itemData}
+                        </div>
                         </div>
                 </div>  
-            </div>   
+              
            
             </div>
         );

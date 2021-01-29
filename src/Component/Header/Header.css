@@ -2,7 +2,9 @@
     background: #0A3F4D;
     color: white;
 }
-
+.search_icon{
+    width: 70px;
+}
 .flex-container{
     display:flex;
     flex-wrap: wrap;

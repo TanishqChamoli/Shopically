@@ -1,3 +1,6 @@
+.bg-search{
+    background: #DAEDED;
+}
 .searchSection{
     height: 5%;
     background-color: #0a3f4d;
@@ -28,16 +31,17 @@ div.card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.res-cards{
-    display: flex;
-    flex-wrap: wrap;
+.card-displays{
+   display: flex;
+   flex-wrap: wrap;
+   padding: 1% 1% 5% 1%;
 }
 div.d-flex{
     /* justify-content: center; */
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    border-top:20px solid white;
+    /* border-top:20px solid white; */
 }
 .card-title{
     color: whitesmoke;
@@ -65,8 +69,15 @@ button.btn-tag{
     margin-left:10%;
 }
 .main-div{
-    width:80%;
-    background-color:rgba(238, 238, 238, 0.8);
+    width:75%; 
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    margin-top: 0%;
+    margin-left: 1%;
+    margin-right: auto;
+    margin-bottom: 1%;
+    /* background-color:rgba(238, 238, 238, 0.8); */
 }
 .side-nav{
     width:400px;
@@ -97,9 +108,13 @@ button.btn-tag{
     color: rgb(243, 91, 116);
 }
 .aside{
-    width:20%;
-    background-color: rgba(238, 238, 238, 0.8);
-    border-right:20px solid white;
+    width:15%;
+    background-color: white;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    /* border-right:20px solid white; */
 }
 
 .srch-prdt-button{
@@ -120,7 +135,20 @@ button.btn-tag{
     margin-left:2%;
 }
 .aside-h2{
-    margin-left:2%;
+    padding-left:25px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    margin-bottom: 2%;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+.pre-search{
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #767676;
 }
 @media only screen and (max-width: 1725px)
 {

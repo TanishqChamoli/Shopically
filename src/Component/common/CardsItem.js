@@ -49,11 +49,12 @@ export default class Cards extends React.Component {
                     </Card.Body>
                 </Card> */}
                 <a style={{ cursor: 'pointer' }} href={"/product?id=" + this.props.id}>
-                    <img src={config.url.API_URL +"shopically/my-app/image/" + this.props.imageURL} className="prdt-img"/>
+                    {/* <img src={config.url.API_URL +"shopically/my-app/image/" + this.props.imageURL} className="prdt-img"/> */}
+                    <img src="Product1.jpg" className="prdt-img"/>
                     <div className="card-dtls">
-                    <div className="prdt-name">{this.props.productName}</div>
+                    <div className="prdt-name">Name :{this.props.productName}</div>
                     <div className="prdt-btns">
-                    <div className="prdt-price">{this.props.price}</div>
+                    <div className="prdt-price">Rs.{this.props.price}</div>
                     <Button type="button" onClick={this.openCart.bind(this)} value={this.props.id}  >Buy</Button>
                         <Button type="button" onClick={this.SaveToCart.bind(this)} value={this.props.id}  >Cart</Button>
                     </div>

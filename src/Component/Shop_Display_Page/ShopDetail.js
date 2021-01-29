@@ -96,9 +96,9 @@ class ShopPage extends React.Component {
                             </form>
                     </div>
                 </div> 
-                <div className="side-card">         
-                        <aside className="filter">
-                            <h1>Filters</h1>
+                <div className="d-flex d-flex-div">            
+                <aside className="aside">
+                    <h2 className="aside-h2">Filters</h2>
                             <form onSubmit={this.handleFilter}>
                                 <label for="colours">Colour:</label><br/>
                                 <select name="colours" id="colours" multiple={true} value={this.state.value} onChange={this.handleFilterChange}>
@@ -116,12 +116,13 @@ class ShopPage extends React.Component {
                                 <br />
                             </form>
                         </aside>
-                        <h2>Products</h2><br />
-                        <div className="show-prdt">
+                        <div className="main-div">
+                        <h2 className="aside-h2">Products</h2>
+                        <div className="card-displays">
                                 {itemData}
                         </div>
                         </div> 
-                
+                        </div>
             </div>
         );
     }
