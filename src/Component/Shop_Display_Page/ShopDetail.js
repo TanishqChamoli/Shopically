@@ -8,6 +8,10 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import './ShopDisplay.css';
 import { config } from '../common/Constants'
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 class ShopPage extends React.Component {
     constructor(props) {
@@ -28,19 +32,19 @@ class ShopPage extends React.Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-        if (this.state.querySearch != ''){
+        if (this.state.querySearch !== ''){
             let formData = new FormData();
             formData.append("q", this.state.querySearch);
             formData.append("sid", this.state.sid);
-            if (this.state.colours != null && this.state.colours != '')
+            if (this.state.colours != null && this.state.colours !== '')
                 formData.append("colours", this.state.colours);
-            if (this.state.brands != null && this.state.brands != '')
+            if (this.state.brands != null && this.state.brands !== '')
                 formData.append("brands", this.state.brands);
 
             const phpurl = config.url.API_URL+"shopically/my-app/backend/shopdisplaypage.php";
             axios.post(phpurl, formData)
                 .then(response => {
-                    if (response.data.products != this.state.items)
+                    if (response.data.products !== this.state.items)
                         this.setState({
                             items: response.data.products,
                             shop_info: response.data.shop_info[0], });
@@ -78,14 +82,24 @@ class ShopPage extends React.Component {
         return (
             <div>
                 <div className="shop-head">
-                  
+                    <FontAwesomeIcon class="back-button" icon={faArrowLeft}/>
                     <div className="shop-detail">
-                        <h1 class="shop_name">Name :{this.state.shop_info.shop_name}</h1>
-                        <p class="lead">Location :{this.state.shop_info.shop_location}</p>
-                        <p class = "lead">Owner Name :{this.state.shop_info.owner_name}</p>
+                        <div className="shop-detail-main">
+                            <h1 class="shop_name">Name :{this.state.shop_info.shop_name}</h1>
+                            <p class="lead">Location :{this.state.shop_info.shop_location}</p>
+                            <FontAwesomeIcon class="rating" icon={faStar} />&nbsp;
+                            <FontAwesomeIcon class="rating" icon={faStar} />&nbsp;
+                            <FontAwesomeIcon class="rating" icon={faStar} />&nbsp;
+                            <FontAwesomeIcon class="rating" icon={faStar} />&nbsp;
+                            <FontAwesomeIcon class="rating" icon={faStar} />&nbsp;
+                        </div>
+                        <div className="shop-detail-foot">                            
+                            <p class="minor-2">Owner Name :{this.state.shop_info.owner_name}</p>
+                            <p class="minor-1">Phone no. 9874563210</p>
+                        </div>
                     </div>
                       <div class="shop-img">
-                        <img className="shopImg" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Charity_shop_in_West_Street_%286%29_-_geograph.org.uk_-_1504815.jpg"  />
+                        <img className="shopImg" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Charity_shop_in_West_Street_%286%29_-_geograph.org.uk_-_1504815.jpg" alt="ShopImage" />
                     </div>
                 </div>
                 <div className="R-search">
